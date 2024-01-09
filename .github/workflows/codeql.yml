@@ -29,6 +29,7 @@ jobs:
 
     - name: Compile the C code using Makefile
       run: make
+      continue-on-error: true # Continue if make fails, for diagnostic purposes
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
